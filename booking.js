@@ -1,23 +1,26 @@
-const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
+
+const booking = (req,res) => {
+    console.log(req.session)
+    //loggedIn = req.session.userId;
+    if(loggedIn){
+        //console.log("you need to login first")
+      //return  res.redirect("/book")
+      res.render("book")
+    }
+    else {
+        res.redirect("/loginpage")
+    }
+}
+module.exports = booking;
 
 
 
-const Schema = mongoose.Schema;
-const bookingSchema = new Schema({
-  name: {type:String, unique: true},
-  email: {type:String, unique: true},
-  number: {type:String, unique: true},
-  address: {type:String, unique: true},
-  destination: {type:String, unique: true},
-  numbers: {type:String, unique: true},
-  arrivingdate: {type:String, unique: true},
-  leavingdate: {type:String, unique: true},
-  text: String,
-  email: String
 
-
-})
-
-const book = mongoose.model('book', userSchema);
-module.exports = book;
+//global.loggedIn = null;
+//  global.userType = null;
+//  app.use("*", (req, res, next) => {
+//    //console.log(req.session)
+///    userType = req.session.userType;
+   
+ //   next()
+// });
