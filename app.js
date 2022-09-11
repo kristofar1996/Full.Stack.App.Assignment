@@ -20,7 +20,7 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: true
   }))
-  
+
 global.loggedIn = null;
 app.use("*", (req, res, next) => {
     //console.log(req.session)
@@ -35,7 +35,7 @@ app.use("*", (req, res, next) => {
  //   next()
 // });
 
-
+//boking request
 const bookingController = require('./Controllers/booking')
 app.get('/booking', bookingController)
 
@@ -47,7 +47,7 @@ app.get('/booking', bookingController)
 //user Register process
 const newUserController = require('./Controllers/newUser')
 app.get('/auth/Register', newUserController) 
-
+//post request
 const storeUserController = require('./Controllers/storeUser')
 app.post('/users/Register', storeUserController)
 
@@ -56,7 +56,7 @@ app.post('/users/Register', storeUserController)
 const loginController = require('./Controllers/login')
 app.get('/auth/login', loginController);
 
-
+//post request
 app.post('/users/loginpage',userLoginControllers)
 
 
@@ -89,17 +89,10 @@ app.get("/loginpage", (req, res )=> {
     res.render("loginpage")
 })
 
-app.get("/basket", (req, res )=> {
-    res.render("basket")
-})
-
 app.get("/book", (req, res )=> {
     res.render("book")
 })
 
-//app.listen(301, ()=> {
-    //console.log("Server Started")
-//})
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -109,8 +102,8 @@ app.listen(port, ()=>{
   console.log('Server Started')
 })
 
-// to start the main page http://localhost:301/home#
+// to start the main page npm start port im using is 301
 // to start the server cd and the directory and npm start
-//to start all pages we need to change just home with the name of the page 
+//to start all pages we need to change just home with the name of the page, or navigate from the navigation bar on the top
 ///heroku link https://newappqho.herokuapp.com/home
-//github link
+//github link  https://github.com/kristofar1996/Full.Stack.App.Assignment.git
