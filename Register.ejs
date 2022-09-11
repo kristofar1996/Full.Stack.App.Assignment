@@ -1,0 +1,76 @@
+<html lang="en">
+<!-- header section starts  -->
+<head>
+    <title>Full Stack App (Traveling Website)</title>
+    <link rel = "stylesheet" href = "/style/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <div class= "logo">
+                <img src="Graphics/photo2.jpg">
+            </div>
+            <ul>
+                <li class="active"><a href="/home">Home</a></li>
+                <li><a href="/Register">RegisterUser</a></li>
+                <li><a href="/loginpage">Log In</a></li>
+                <li><a href="/book">Book</a></li>
+            </ul>
+        </div>
+
+
+        <div class="title">
+            <h1>Register for new USER.
+            </h1>
+        </div>
+                        <div class="form">
+                            <form id="book-form" action="/users/Register" method="POST"> <!-- action could be action="/newUser" -->
+                                <div class="form-floating">
+                                    <input class="form-control" id="username" type="text" name="username">
+                                    <label for="username">User Name</label>
+                                </div>                                
+                                <div class="form-floating">
+                                    <input class="form-control" id="password" type="password" name="password">
+                                    <label for="password">Password</label>
+                                </div>  
+                                <br />
+                                <!-- Submit Button-->
+                                <button class="btn btn-primary" id="submitButton" type="submit">Register</button>
+                            </form>
+            </div>
+        </main>
+ <!-- footer section starts  -->
+ <section class="footer">
+
+    <div class="box-container">
+      <div class="box">
+         <h3>quick links</h3>
+         <a href="home.ejs"> <i class="fas fa-angle-right"></i> home</a>
+         <a href="Register.ejs"> <i class="fas fa-angle-right"></i> package</a>
+         <a href="book.ejs"> <i class="fas fa-angle-right"></i> book</a>
+      </div>
+
+       <div class="box">
+          <h3>extra links</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+       </div>
+ 
+       <div class="box">
+          <h3>contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> 07391270065 </a>
+          <a href="#"> <i class="fas fa-envelope"></i> kristofarzarchev@gmail.com</a>
+          <a href="#"> <i class="fas fa-map"></i> London,UK</a>
+       </div>
+    </div>
+ 
+    <div class="credit"> created by <span>Kristofar Zarchev</span> </div>
+ 
+
+<!-- footer section ends -->
+<script src="/js/script.js"></script>
+</body>
+</html>
